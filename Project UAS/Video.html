@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Landing Page</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .videobackground{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: black;
+            background: rgba(0, 0, 0, 0.2);
+            /* background: linear-gradient(to right, rgba(59, 71, 246, 0.3), rgba(66, 255, 91, 0.3)); */
+            color: rgba(255, 255, 255, 0.28);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vidbg{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            min-height: 100%;
+            min-width: 100%;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="videobackground">
+        <h1>Welcome to my portfolio page</h1>
+        <video class= "vidbg" src="video/sea waves sound effects.mp4" autoplay muted loop></video>
+    </div>
+
+    <script>
+        // mengarah ke homepage setelah 5 detik
+        setTimeout(function(){
+            window.location.href = "index.html" // pindah ke index4.html
+        }, 4000); // 50000ms = 5 detik
+    </script>
+</body>
+</html>
+
+<!-- 
+display: flex
+agar kita bisa menaruh dimana posisi video tersebut sesuka hati kita
+
+ketika "position: absolute"
+maka harus diikuti dengan bottom dan left 
+karena tidak bisa memakai margin ataupun padding
+
+min height dan min width akan berpengaruh ke div 
+
+z-index: -1
+agar video nya mundur ke layer belakang
+
+position dan overflow itu sepaket
+posotion: relative
+overflow: hidden
+agar konten yang berlebih ditutup
+-->
